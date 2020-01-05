@@ -1,0 +1,23 @@
+\currfilepath
+\vspace{1cm}
+
+\begin{center}
+    \begin{sequencediagram}
+        \renewcommand\unitfactor{0.6} % 0.6 is default scale factor
+
+        \newthread[teal!60]{b}{\faUserMd \ Bürger}
+        \newthread[red!20]{p}{\faBuildingO \ Service Provider}
+        \newinst[2]{bm}{\faMobile \ 2FA}
+        \newinst[2]{i}{\faInstitution \ Identity Provider}
+
+        \begin{call}{b}{Login}{p}{Eingeloggt}
+            \begin{call}{p}{Authentifizieren}{i}{Bestätigung}
+                \begin{call}{i}{MFA Anfrage}{bm}{Faktor bestätigt}
+                    \begin{call}{bm}{Authentifizieren}{b}{Authentifiziert}
+                    \end{call}
+                \end{call}
+            \end{call}
+        \end{call}
+
+    \end{sequencediagram}
+\end{center}

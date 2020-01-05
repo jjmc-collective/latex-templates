@@ -1,0 +1,56 @@
+\documentclass[a4paper, 12pt]{report}
+
+\input{shared-deps.tex} % Load shared Dependencies
+%
+% ----- Global Variables -------------
+\newcommand{\varDocTitle}{Quarterly Report Q1}
+\newcommand{\varDocAuthor}{Firstname Lastname}
+\newcommand{\varInstitution}{Institution Inc.}
+\newcommand{\varAbgabeDatum}{5. Jan 2020}
+\newcommand{\varReportType}{Case Study}
+%
+% ----- Doc -- BEGIN
+\begin{document}
+
+    % ----- Doc -- Title Page
+    \begin{titlepage}
+        \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+        \center
+        \textsc{\large \varInstitution}\\[1.5cm]
+        \textsc{\large \varReportType}\\[1.5cm]
+        \includegraphics[width=0.5\textwidth]{figures/images/logo.png}\\[1.5cm]
+        {\huge \varDocTitle }\\[2cm]
+        {\large\textit{Author}}\\
+        \textsc{\varDocAuthor}\\[1cm]
+        {\large\today\\v1.0}
+    \end{titlepage}
+
+    \tableofcontents
+
+    \chapter{Images}
+
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=0.05]{figures/images/documents.jpg}
+        \caption{Image Scaled with factor 0.05}
+        \label{fig:mobileid-architecture}
+    \end{figure}
+
+    \chapter{Figures}
+
+    \section{Trees}
+
+    \subsection{qtree}
+    \input{figures/tree/qtree.tex}
+    \newpage
+
+    \subsection{tikz}
+    \input{figures/tree/tikz.tex}
+    \newpage
+
+    \section{Sequence Diagrams}
+    \input{figures/sequence/pgf-umlsd.tex}
+    \newpage
+    
+
+\end{document}

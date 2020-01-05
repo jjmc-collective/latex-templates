@@ -1,0 +1,34 @@
+\documentclass[aspectratio=169, xcolor=table]{beamer}
+
+\input{shared-deps.tex} % Load shared Dependencies
+
+\makeatletter
+
+\title{Quarterly Report Q1}
+\author{\href{mailto:xy@xy.com}{Firstname Lastname}}
+\institute{Institution}
+\date{9. Januar 2020}
+
+\usetheme[progressbar=frametitle, background=light]{metropolis} % install package from ctan if not available
+
+% Metropolis Theme Settings
+\setbeamercolor{palette primary}{fg=white, bg=black}
+\setbeamercolor{progress bar}{fg=teal, bg=white}
+\setbeamercolor{background canvas}{bg=white}
+
+\begin{document}
+    \frame {
+        \titlepage
+    }
+
+    \frame {
+        \frametitle{Rechtliche Grundlagen E-Voting}
+
+        \textbf{Verordnung der Bundeskanzlei über die elektronische Stimmabgabe (VEleS)}
+        \begin{itemize}
+            \item Offenlegung des Quellcodes (Teilrevision 2018)
+            \item Risikobeurteilung und Massnahmen zur Risikominimierung
+            \item Anforderungen für den Einsatz des Systems bei mehr als \textbf{30\%} bzw. \textbf{50\%} der kantonalen Wählerschaft
+        \end{itemize}
+    }
+\end{document}

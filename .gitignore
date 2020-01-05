@@ -1,3 +1,6 @@
+# Custom Files
+*_v1.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -276,3 +279,4 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
