@@ -9,7 +9,7 @@
 #CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
 #LDFLAGS =  -fsanitize=address
 REPORT_NAME = report
-PRESENATION_NAME = presentation_v1
+PRESENATION_NAME = presentation
 OUT_DIR = dist/
 
 all: clean setup report pub
@@ -37,5 +37,19 @@ clean:
 		rm -f *.toc
 		rm -f *.snm
 		rm -rf dist
+		rm -f *.ist
+		rm -f *.bbl
+		rm -f *.gls
+		rm -f *.alg
+		rm -f *.acn
+		rm -f *.glo
+		rm -f *.glg
+		rm -f *.lot
+		rm -f *.bcf
+		rm -f *.blg
+		rm -f *.lof
+		rm -f *.run.xml
+		rm -f *.acr
+		rm -f *.fdb_latexmk
 		rm -f ${REPORT_NAME}.pdf
 		rm -f ${PRESENATION_NAME}.pdf
