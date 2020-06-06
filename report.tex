@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt]{report}
 
 \input{shared-deps.tex} % Load shared Dependencies
+\usepackage[hidelinks,bookmarks=true]{hyperref}
 %
 % ----- Global Variables -------------
 \newcommand{\varDocTitle}{Quarterly Report Q1}
@@ -8,6 +9,11 @@
 \newcommand{\varInstitution}{Institution Inc.}
 \newcommand{\varAbgabeDatum}{5. Jan 2020}
 \newcommand{\varReportType}{Case Study}
+%
+% ----- Commands -- Import glossary
+\makeglossaries
+\loadglsentries{glossary}
+\glsaddall
 %
 % ----- Doc -- BEGIN
 \begin{document}
@@ -27,6 +33,12 @@
 
     \tableofcontents
 
+    \printglossary
+    \printglossary[type=\acronymtype, title=Begriffe und Abkürzungen, toctitle=Begriffe und Abkürzungen]
+    
+    \listoftables % list of figures
+    \listoffigures % list of tables
+
     \chapter{Images}
 
     \begin{figure}[!htb]
@@ -35,6 +47,9 @@
         \caption{Image Scaled with factor 0.35}
         \label{fig:mobileid-architecture}
     \end{figure}
+
+    \chapter{Intro}
+    \input{chapters/intro/sample}
 
     \chapter{Figures}
 
@@ -51,6 +66,8 @@
     \section{Sequence Diagrams}
     \input{figures/sequence/pgf-umlsd.tex}
     \newpage
+
+    \printbibliography
     
 
 \end{document}

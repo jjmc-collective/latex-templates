@@ -5,14 +5,14 @@
 # - pdflatex
 # - pandoc
 
-CXX = g++
-CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
-LDFLAGS =  -fsanitize=address
-REPORT_NAME = report_v1
+#CXX = g++
+#CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
+#LDFLAGS =  -fsanitize=address
+REPORT_NAME = report
 PRESENATION_NAME = presentation_v1
 OUT_DIR = dist/
 
-all: clean setup report keynote pub
+all: clean setup report pub
 
 setup:
 		mkdir -p ${OUT_DIR}
