@@ -15,6 +15,17 @@
 \loadglsentries{glossary}
 \glsaddall
 %
+% ----- Commands -- Use citiations in footnote
+\DeclareCiteCommand{\footcite}[\mkbibfootnote] 
+	{\usebibmacro{prenote}}                                 
+	{\usebibmacro{citeindex}
+		\printfield{labelalpha}
+		\setunit{\labelnamepunct}
+		\printfield[citetitle]{title}
+	}
+  {\addsemicolon\space}
+  {\usebibmacro{postnote}}
+%
 % ----- Doc -- BEGIN
 \begin{document}
 
