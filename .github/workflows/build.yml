@@ -14,5 +14,5 @@ jobs:
               root_file: report.tex
           - uses: actions/upload-artifact@v2
             with:
-              name: report
-              path: report.pdf
+              name: pdf
+              path: *.pdf
