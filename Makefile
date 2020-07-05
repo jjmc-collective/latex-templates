@@ -8,11 +8,14 @@
 #CXX = g++
 #CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
 #LDFLAGS =  -fsanitize=address
+
+.PHONY: setup clean pub
+
 REPORT_NAME = report
 PRESENATION_NAME = presentation
 OUT_DIR = dist/
 
-all: clean setup report pub
+all: clean setup report keynote pub
 
 setup:
 		mkdir -p ${OUT_DIR}
